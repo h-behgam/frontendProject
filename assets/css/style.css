@@ -6,10 +6,14 @@
   --section: #dad8d8;
   --sectionReverse: #333333;
   --footerColor: #f0f0f0;
+  --mainColor: #f0f0f0;
 }
 body {
   background-color: var(--darkRed);
+  color: var();
   font-size: 20px;
+  line-height: 1.4;
+  color: var(--mainColor);
 }
 .sectionWrapper {
   padding: 50px;
@@ -76,13 +80,215 @@ header::after {
   border-radius: 50px;
   background-color: #ffffff;
 }
+nav a {
+  position: relative;
+  display: inline-block;
+  /*padding: 0 30px;*/
+  /*color: #fff;*/
+  color: #444;
+  text-decoration: none;
+  width: 100%;
+}
+.current-nav-item a {
+  color: #5c29a0;
+  border-bottom: 3px solid #5c29a0;
+}
+.nav-item a:after {
+  content: "";
+  display: block;
+}
+.nav-item a:after {
+  position: absolute;
+  left: 50%;
+  /*    bottom: 0;*/
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background-color: var(--midRed);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.nav-item a:hover:after {
+  width: 100%;
+}
 /* header end */
+
+/** --  section slider  */
+section.slider {
+  margin-top: 70px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/** --  section slider  */
 
 /** --  section introduction  */
 section.introduction {
-  margin-top: 70px;
+  /* margin-top: 70px; */
+}
+section.introductions div.sectionWrapper div.introduction {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.introductions div.sectionWrapper div.introduction div.info h2{
+margin: 100px 0 30px 0;
+font-size: 200%;
+}
+section.introductions div.sectionWrapper div.introduction div.info p.secondInfo{
+  margin: 30px 0 80px 0;
+  font-size: 150%;
+}
+section.introductions div.sectionWrapper div.introduction div.info a.infoLink{
+  background-color: var(--midRed);
+  color: var(--mainColor);
+  padding: 15px 50px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 1px solid var(--red);
+}
+section.introductions div.sectionWrapper div.introduction div.info a.infoLink:hover{
+  transition: 0.3s;
+  background-color: var(--red);
+  color: #ffffff;
+}
+section.introductions div.sectionWrapper div.introduction div.info {
+  flex-basis: 45%;
+}
+section.introductions div.sectionWrapper div.introduction div.image {
+  flex-basis: 45%;
+}
+section.introductions div.sectionWrapper div.introduction div.image{
+  max-width: 450px;
+}
+section.introductions div.sectionWrapper div.introduction div.image img{
+  width: 100%;
 }
 /** --  section introduction */
+
+/** --  section product */
+section.product{
+  background-color: var(--section);
+}
+section.product .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+section.product .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+section.product .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.product .swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content {
+	/* width: 100%; */
+	/* padding: 0 20px; */
+  /* width: 335px;
+  height: 250px; */
+	display: flex;
+	/* text-align: center; */
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	/* max-height: 425px; */
+	/* max-height: 360px; */
+	overflow: hidden;
+	margin-top: auto;
+	transition: 0.7s;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content .product-banner {
+	width: 100%;
+  height: 100%;
+	position: relative;
+	/* margin-bottom: 32px; */
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh{
+  position: absolute;
+  top: 400px;
+  transition: 0.7s;
+  background-color: rgba(240,240,240,0.7);
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content:hover div.proh {
+  position: absolute;
+  top: 165px;
+  transition: 0.7s;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh .product-title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	margin-bottom: 32px;
+	/* color: #000000; */
+	color: #000;
+}
+/** --  section product */
 
 /** --  section info */
 section.info {
@@ -134,9 +340,13 @@ footer div.sectionWrapper div.footers a {
   color: var(--footerColor);
 }
 footer div.sectionWrapper div.footers > div {
-  flex-basis: 30%;
+  flex-basis: 25%;
 }
 footer div.sectionWrapper div.footers div.footer-right h5 {
+  margin-bottom: 15px;
+  font-size: 120%;
+}
+footer div.sectionWrapper div.footers div.footer-mid h5 {
   margin-bottom: 15px;
   font-size: 120%;
 }
@@ -147,15 +357,15 @@ footer div.sectionWrapper div.footers div.footer-left div.footerForm {
   display: flex;
   flex-direction: column;
 }
-footer div.sectionWrapper div.footers div.footer-left div.footerForm form{
-    display: flex;
-    flex-direction: column;
+footer div.sectionWrapper div.footers div.footer-left div.footerForm form {
+  display: flex;
+  flex-direction: column;
 }
 footer div.sectionWrapper div.footers div.footer-left div.footerForm h5 {
   margin-bottom: 20px;
 }
 footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email {
-  padding: 7px;
+  padding: 7px 7px 7px 0;
   width: 70%;
   font-size: 85%;
   background-color: transparent;
@@ -167,13 +377,35 @@ footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email
   color: antiquewhite;
   margin-bottom: 15px;
 }
-footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email:focus-visible{
-    outline: none;
+footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email:focus-visible {
+  outline: none;
 }
-footer div.sectionWrapper div.footers div.footer-left div.footerForm form button{
-    width: 50%;
-    padding: 10px;
-    border-radius: 6px;
+footer div.sectionWrapper div.footers div.footer-left div.footerForm form button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--midRed);
+  color: var(--footerColor);
+  transition: 0.2s;
+  border: 1px solid var(--red);
+}
+footer div.sectionWrapper div.footers div.footer-left div.footerForm form button:hover{
+  background-color: var(--red);
+  color: #ffffff;
+}
+footer div.sectionWrapper div.footers div.footer-docial div.logo {
+  margin-bottom: 20px;
+}
+footer div.sectionWrapper div.footers div.footer-docial div.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer div.sectionWrapper div.footers div.footer-docial div.social a {
+  padding-right: 5px;
+}
+footer div.sectionWrapper div.footers div.footer-docial div.social a ion-icon.md.hydrated {
+  font-size: 40px;
 }
 
 /** --  FOOTER  */

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <title>Document</title>
 </head>
 
@@ -16,8 +18,8 @@
         <!-- HEADER -->
         <header class="header-section">
             <div class="container">
-                <nav id="tNav" class="header-nav">
-                    <div class="nav-toggle">
+                <nav class="header-nav">
+                    <div id="tNav" class="nav-toggle">
                         <div class="bar"></div>
                         <div class="bar"></div>
                         <div class="bar"></div>
@@ -27,7 +29,7 @@
                             <img class="logo-icon" src="./assets/img/logo.png" alt="Logo">
                         </a>
                     </div>
-                    <ul class="nav-list">
+                    <ul id="navList" class="nav-list">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">
                                 Home
@@ -54,21 +56,123 @@
         </header>
         <!-- END OF HEADER -->
 
-        <!-- START section introduction -->
-        <section class="introduction">
+        <!-- START section slider -->
+        <section class="slider">
+            <!-- Slider main container -->
+            <div id="sliders" class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div id="sWrapper" class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="" alt=""></div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </section>
+        <!-- END section slider -->
+
+        <!-- START section introduction -->
+        <section class="introductions">
+            <div class="sectionWrapper">
+                <div class="introduction">
+                    <div class="info">
+                        <h2>TITLE</h2>
+                        <p class="firstInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus est
+                            repellat deserunt ut, facilis dolore quasi soluta cum quo rem quos iure ea. Aliquam, et.
+                            Eius sit non odio rerum.</p>
+                        <p class="secondInfo">Lorem ipsum dolor sit amet consectetur</p>
+                        <a href="#" class="infoLink">Read more</a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/img/coffee2.png" alt="coffee">
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- END section introduction -->
 
 
-        <!-- START section introduction -->
+        <!-- START section product -->
         <section class="product">
+            <div class="sectionWrapper">
+                <div #swiperRef="" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card-content">
+                                <div class="product-banner">
+                                    <img src="./assets/img/product3.jpg" alt="">
+                                </div>
+                                <div class="proh">
+                                    <h3 class="product-title">
+                                        Special product
+                                    </h3>
+                                    <a class="btn btn-primary btn-pill" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-content">
+                                <div class="product-banner">
+                                    <img src="./assets/img/product4.jpg" alt="">
+                                </div>
+                                <div class="proh">
+                                    <h3 class="product-title">
+                                        Special product
+                                    </h3>
+                                    <a class="btn btn-primary btn-pill" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-content">
+                                <div class="product-banner">
+                                    <img src="./assets/img/product3.jpg" alt="">
+                                </div>
+                                <div class="proh">
+                                    <h3 class="product-title">
+                                        Special product
+                                    </h3>
+                                    <a class="btn btn-primary btn-pill" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-content">
+                                <div class="product-banner">
+                                    <img src="./assets/img/product4.jpg" alt="">
+                                </div>
+                                <div class="proh">
+                                    <h3 class="product-title">
+                                        Special product
+                                    </h3>
+                                    <a class="btn btn-primary btn-pill" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
         </section>
-        <!-- END section introduction -->
+        <!-- END section product -->
 
 
-        <!-- START section introduction -->
+        <!-- START section info -->
         <section class="info">
             <div class="sectionWrapper">
                 <h3>Info Title</h3>
@@ -102,7 +206,7 @@
 
             </div>
         </section>
-        <!-- END section introduction -->
+        <!-- END section info -->
 
         <!-- START footer -->
         <footer>
@@ -110,7 +214,9 @@
                 <div class="footers">
                     <div class="footer-right">
                         <h5>About us</h5>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sint pariatur sequi quaerat iste cumque veniam laborum corrupti, sapiente odio. Consequuntur at pariatur qui ducimus provident officiis quidem deleniti ipsam.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sint pariatur sequi quaerat
+                            iste cumque veniam laborum corrupti, sapiente odio. Consequuntur at pariatur qui ducimus
+                            provident officiis quidem deleniti ipsam.</p>
                     </div>
                     <div class="footer-mid">
                         <h5>Links</h5>
@@ -129,15 +235,39 @@
                             </form>
                         </div>
                     </div>
+                    <div class="footer-docial">
+                        <div class="logo">
+                            <a class="logo-link" href="./index.html">
+                                <img class="logo-icon" src="./assets/img/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="#">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
         <!-- END footer -->
     </div>
     <!-- END of page-content-wrappe -->
-    <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
