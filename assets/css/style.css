@@ -165,15 +165,15 @@ section.introductions div.sectionWrapper div.introduction {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-section.introductions div.sectionWrapper div.introduction div.info h2{
-margin: 100px 0 30px 0;
-font-size: 200%;
+section.introductions div.sectionWrapper div.introduction div.info h2 {
+  margin: 100px 0 30px 0;
+  font-size: 200%;
 }
-section.introductions div.sectionWrapper div.introduction div.info p.secondInfo{
+section.introductions div.sectionWrapper div.introduction div.info p.secondInfo {
   margin: 30px 0 80px 0;
   font-size: 150%;
 }
-section.introductions div.sectionWrapper div.introduction div.info a.infoLink{
+section.introductions div.sectionWrapper div.introduction div.info a.infoLink {
   background-color: var(--midRed);
   color: var(--mainColor);
   padding: 15px 50px;
@@ -181,7 +181,7 @@ section.introductions div.sectionWrapper div.introduction div.info a.infoLink{
   transition: 0.3s;
   border: 1px solid var(--red);
 }
-section.introductions div.sectionWrapper div.introduction div.info a.infoLink:hover{
+section.introductions div.sectionWrapper div.introduction div.info a.infoLink:hover {
   transition: 0.3s;
   background-color: var(--red);
   color: #ffffff;
@@ -192,16 +192,16 @@ section.introductions div.sectionWrapper div.introduction div.info {
 section.introductions div.sectionWrapper div.introduction div.image {
   flex-basis: 45%;
 }
-section.introductions div.sectionWrapper div.introduction div.image{
+section.introductions div.sectionWrapper div.introduction div.image {
   max-width: 450px;
 }
-section.introductions div.sectionWrapper div.introduction div.image img{
+section.introductions div.sectionWrapper div.introduction div.image img {
   width: 100%;
 }
 /** --  section introduction */
 
 /** --  section product */
-section.product{
+section.product {
   background-color: var(--section);
 }
 section.product .swiper {
@@ -238,57 +238,121 @@ section.product .swiper-slide img {
 
 section.product .swiper {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   margin: 20px auto;
 }
 section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content {
-	/* width: 100%; */
-	/* padding: 0 20px; */
+  width: 100%;
+  /* padding: 0 20px; */
   /* width: 335px;
   height: 250px; */
-	display: flex;
-	/* text-align: center; */
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	/* max-height: 425px; */
-	/* max-height: 360px; */
-	overflow: hidden;
-	margin-top: auto;
-	transition: 0.7s;
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* max-height: 425px; */
+  max-height: 360px;
+  overflow: hidden;
+  margin-top: auto;
+  transition: 0.7s;
 }
 section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content .product-banner {
-	width: 100%;
+  width: 100%;
   height: 100%;
-	position: relative;
-	/* margin-bottom: 32px; */
-	display: flex;
-	/* align-items: center; */
-	justify-content: center;
+  position: relative;
+  /* margin-bottom: 32px; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 }
-section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh{
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh {
   position: absolute;
   top: 400px;
   transition: 0.7s;
-  background-color: rgba(240,240,240,0.7);
-  padding: 5px;
+  background-color: rgba(240, 240, 240, 0.6);
+  padding: 15px 5px;
   text-align: center;
   border-radius: 10px;
+  width: 100%;
 }
 section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content:hover div.proh {
   position: absolute;
   top: 165px;
   transition: 0.7s;
 }
-section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh .product-title {
-	font-size: 18px;
-	font-weight: bold;
-	line-height: 24px;
-	margin-bottom: 32px;
-	/* color: #000000; */
-	color: #000;
+section.product
+  div.swiper.mySwiper2
+  div.swiper-wrapper
+  div.swiper-slide
+  div.product-card-content
+  div.proh
+  .product-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 32px;
+  /* color: #000000; */
+  color: #000;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh a.btn {
+  padding: 10px 40px;
+  background-color: var(--midRed);
+  color: var(--mainColor);
+  border: 1px solid var(--red);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh a.btn:hover {
+  background-color: var(--red);
 }
 /** --  section product */
+
+/** --  section video */
+section.video div.video-banner {
+  width: 100%;
+  height: 500px;
+  background: url(../img/backVideo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.video-banner .play-icon {
+  width: 125px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.video-promotion .video-embed-content {
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background-color: black;
+}
+.video-embed-content iframe {
+  border: none;
+  width: 100%;
+}
+.video-embed-content > div,
+.video-embed-content > div > div {
+  height: 100%;
+}
+.video-embed-content.show-video {
+  display: block;
+}
+/** --  section video */
 
 /** --  section info */
 section.info {
@@ -298,6 +362,8 @@ section.info {
 
 section.info div.sectionWrapper h3 {
   text-align: center;
+  color: var(--darkRed);
+  font-size: 200%;
 }
 section.info div.sectionWrapper div.infoBoxes {
   display: flex;
@@ -311,6 +377,7 @@ section.info div.sectionWrapper div.infoBoxes div.infoBox {
 }
 section.info div.sectionWrapper div.infoBoxes div.infoBox h4 {
   text-align: center;
+  font-size: 130%;
   padding: 10px 0;
   color: var(--darkRed);
 }
@@ -322,6 +389,55 @@ section.info div.sectionWrapper div.infoBoxes div.infoBox:last-child {
   padding-right: 0px;
 }
 
+/** --  section info */
+
+/** --  section info */
+section.boxes {
+  /* height: 300px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section.boxes div.box div.image1 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.boxes div.box div.image1 h4{
+  font-size: 250%;
+  text-shadow: 0px 0px 13px #000000;
+}
+section.boxes div.box div.image1 p{
+  font-size: 140%;
+}
+section.boxes div.box div.image2 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.boxes div.box div.image2 h4 {
+  font-size: 250%;
+  text-shadow: 0px 0px 13px #000000;
+  /* margin-top: 30px; */
+  /* color: var(--black); */
+}
+section.boxes div.box div.image2 p{
+  /* color: var(--black); */
+  font-size: 140%;
+/* font-weight: 500; */
+}
 /** --  section info */
 
 /** --  FOOTER */
@@ -389,7 +505,7 @@ footer div.sectionWrapper div.footers div.footer-left div.footerForm form button
   transition: 0.2s;
   border: 1px solid var(--red);
 }
-footer div.sectionWrapper div.footers div.footer-left div.footerForm form button:hover{
+footer div.sectionWrapper div.footers div.footer-left div.footerForm form button:hover {
   background-color: var(--red);
   color: #ffffff;
 }
