@@ -268,18 +268,23 @@ section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.pro
 }
 section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content div.proh {
   position: absolute;
-  top: 400px;
+  top: 450px;
   transition: 0.7s;
   background-color: rgba(240, 240, 240, 0.6);
   padding: 15px 5px;
   text-align: center;
   border-radius: 10px;
   width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 section.product div.swiper.mySwiper2 div.swiper-wrapper div.swiper-slide div.product-card-content:hover div.proh {
   position: absolute;
-  top: 165px;
+  /* top: 165px; */
   transition: 0.7s;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 section.product
   div.swiper.mySwiper2
@@ -391,59 +396,92 @@ section.info div.sectionWrapper div.infoBoxes div.infoBox:last-child {
 
 /** --  section info */
 
-/** --  section info */
+/** --  section boses */
 section.boxes {
   /* height: 300px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-section.boxes div.box div.image1 {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/1.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 500px;
+section.boxes div {
+  flex-basis: 33.333%;
   height: 292px;
+}
+section.boxes div h4 {
+  font-size: 250%;
+  text-shadow: 0px 0px 13px #000000;
+}
+section.boxes div p {
+  font-size: 140%;
+}
+section.boxes div.box div.image1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-section.boxes div.box div.image1 h4{
-  font-size: 250%;
-  text-shadow: 0px 0px 13px #000000;
+section.boxes div.box div.image1 h4 {
 }
-section.boxes div.box div.image1 p{
-  font-size: 140%;
+section.boxes div.box div.image1 p {
 }
 section.boxes div.box div.image2 {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/2.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 500px;
-  height: 292px;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 section.boxes div.box div.image2 h4 {
-  font-size: 250%;
-  text-shadow: 0px 0px 13px #000000;
-  /* margin-top: 30px; */
-  /* color: var(--black); */
 }
-section.boxes div.box div.image2 p{
-  /* color: var(--black); */
-  font-size: 140%;
-/* font-weight: 500; */
+section.boxes div.box div.image2 p {
 }
-/** --  section info */
+section.boxes div.form{
+  /* flex-basis: 400px; */
+}
+section.boxes div.form div.formbox {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.boxes div.form div.formbox form#box {
+  width: 100%;
+  display: flex;
+}
+section.boxes div.form div.formbox form input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 83%;
+  color: var(--darkRed);
+}
+section.boxes div.form div.formbox p {
+  font-size: 100%;
+  margin: 10px 0 20px 0;
+}
+section.boxes div.form div.formbox form button {
+  background: url(../img/arrow.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  border: none;
+  /* top: -8px; */
+  width: 37px;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+/** --  section boses */
 
 /** --  FOOTER */
 
 footer {
-  background-color: var(--darkRed);
+  background-color: var(--black);
 }
 footer div.sectionWrapper div.footers {
   display: flex;
@@ -569,9 +607,103 @@ footer div.sectionWrapper div.footers div.footer-docial div.social a ion-icon.md
   .nav-list .nav-item:hover {
     background-color: #ea282e4b;
   }
-  /* HEADER*/
+  /* -- boxes */ 
+  section.boxes div {
+    flex-basis: unset;
+    /* height: auto; */
+    width: 100%;
+  }
+section.boxes div.box div.image1,
+section.boxes div.box div.image2 {
+  background-size: 100% 100%;
+}
+section.boxes div.form{
+width: calc(100% - 30px);
+}
+section.boxes div.form div.formbox{
+  padding: 0%;
+}
+  /* --footer */
+  footer div.sectionWrapper div.footers > div {
+    margin-bottom: 40px;
+  }
+  footer div.sectionWrapper div.footers > div {
+    flex-basis: unset;
+  }
 }
 @media (max-width: 768px) {
+  .sectionWrapper{
+    padding: 10px;
+  }
+  /* --section introduction */
+  section.introductions div.sectionWrapper div.introduction {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  section.introductions div.sectionWrapper div.introduction div.info h2{
+    margin-top: 40px;
+  }
+  section.introductions div.sectionWrapper div.introduction div.info p.secondInfo{
+    margin-bottom: 50px;
+  }
+  section.introductions div.sectionWrapper div.introduction div.image {
+    display: none;
+  }
+  /* --section info */
+  section.info div.sectionWrapper div.infoBoxes {
+    justify-content: space-around;
+  }
+  /* --section boxes */
+  section.boxes {
+    justify-content: center;
+  }
+
+  /* -- footer */
+  footer div.sectionWrapper div.footers div.footer-left div.footerForm h5 {
+    margin-bottom: 0px;
+  }
+  footer div.sectionWrapper div.footers {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div.sectionWrapper div.footers > div {
+    /* margin-bottom: 40px; */
+    width: 100%;
+  }
+  footer div.sectionWrapper div.footers{
+    text-align: center;
+  }
+  footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email,
+  footer div.sectionWrapper div.footers div.footer-left div.footerForm form button {
+	width: 100%;
+}
+  footer div.sectionWrapper div.footers div.footer-docial div.social {
+    justify-content: center;
+  }
+  /* footer div.sectionWrapper div.footers div{
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+  } */
 }
 @media (max-width: 576px) {
+  /* -- section introduction */
+  section.introductions div.sectionWrapper div.introduction{
+    padding: 0 0px 20px 0px;
+  }
+  /* --section info */
+    section.info div.sectionWrapper div.infoBoxes {
+      justify-content: center;
+    }
+  section.info div.sectionWrapper div.infoBoxes div.infoBox {
+    padding-right: 0px;
+    max-width: 100%;
+  }
+  /* -- section boxes */
+  section.boxes div.form div.formbox {
+    /* padding: 0 10px; */
+  }
+  /* -- footer */
+
 }
