@@ -9,6 +9,7 @@
   --mainColor: #f0f0f0;
 }
 body {
+  font-family: "Raleway", sans-serif;
   background-color: var(--darkRed);
   color: var();
   font-size: 20px;
@@ -17,6 +18,9 @@ body {
 }
 .sectionWrapper {
   padding: 50px;
+}
+.inputWeight {
+  font-weight: 500;
 }
 
 /* header */
@@ -440,7 +444,7 @@ section.boxes div.box div.image2 h4 {
 }
 section.boxes div.box div.image2 p {
 }
-section.boxes div.form{
+section.boxes div.form {
   /* flex-basis: 400px; */
 }
 section.boxes div.form div.formbox {
@@ -562,50 +566,144 @@ footer div.sectionWrapper div.footers div.footer-docial div.social a ion-icon.md
   font-size: 40px;
 }
 /* -- contact  us */
-section.contact-us{
+section.contact-us {
   margin-top: 70px;
+  background-color: #ffffff;
 }
-section.contact-us div.sectionWrapper div.contact{
+section.contact-us div.sectionWrapper {
+  padding: 0%;
+}
+section.contact-us div.sectionWrapper div.contact {
   display: flex;
   justify-content: center;
-align-items: center;
+  align-items: center;
   flex-direction: column;
 }
-section.contact-us div.sectionWrapper div.contact div.top{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 400px;
-margin: 0 auto;
+section.contact-us div.sectionWrapper div.contact div.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 15px 0 70px 0;
 }
-section.contact-us div.sectionWrapper div.contact div.top p.title{
+section.contact-us div.sectionWrapper div.contact div.top p.title {
   font-size: 80%;
+  color: var(--darkRed);
 }
-section.contact-us div.sectionWrapper div.contact div.top h3{
+section.contact-us div.sectionWrapper div.contact div.top h3 {
   font-size: 150%;
   margin: 20px 0;
+  color: var(--darkRed);
 }
-section.contact-us div.sectionWrapper div.contact div.top p.infoTitle{
-  margin-bottom: 200px;
+section.contact-us div.sectionWrapper div.contact div.top p.infoTitle {
+  /* margin-bottom: 150px; */
+  color: var(--darkRed);
 }
-section.contact-us div.sectionWrapper div.contact div.information{
-background-color: var(--section);
-height: 700px;
-border-radius: 8px;
-width: 80%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
--webkit-box-shadow: 0px 0px 11px 2px rgba(255,255,255,0.7); 
-box-shadow: 0px 0px 11px 2px rgba(255,255,255,0.7);
+section.contact-us div.sectionWrapper div.contact div.information {
+  width: 100%;
+  background-color: var(--sectionReverse);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-section.contact-us div.sectionWrapper div.contact div.information div{
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
+  /* height: 500px; */
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  /* -webkit-box-shadow: 0px 0px 11px 2px rgba(255,255,255,0.7); 
+box-shadow: 0px 0px 11px 2px rgba(255,255,255,0.7); */
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.wrapper {
+  width: 80%;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form,
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info {
   flex-basis: 45%;
 }
-section.contact-us div.sectionWrapper div.contact div.information div.form form{
-display: flex;
-flex-direction: column;
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form {
+  padding: 15px;
+  /* border: 1px solid var(--darkRed); */
+  border-radius: 10px;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form h3.formTitle {
+  font-size: 200%;
+  font-weight: 500;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form p.formInfo {
+  font-size: 80%;
+  margin: 10px 0 40px 0;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form input#name,
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form input#email,
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form textarea {
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 70%;
+  border: 1px solid var(--darkRed);
+  outline-color: var(--darkRed);
+  color: var(--darkRed);
+  margin-bottom: 20px;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form textarea {
+  resize: none;
+  height: 160px;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form button {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 80%;
+  border-radius: 5px;
+  background-color: var(--midRed);
+  color: var(--mainColor);
+  border: 1px solid var(--red);
+  transition: 0.3s;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form button:hover {
+  background-color: var(--red);
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.form form {
+  display: flex;
+  flex-direction: column;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info {
+  padding: 20px;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact {
+  display: flex;
+  align-items: flex-end;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact:first-child {
+  margin-top: 100px;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact ion-icon,
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.socials ion-icon {
+  font-size: 40px;
+  margin-top: 27px;
+  color: var(--mainColor);
+  transition: 0.3s;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact ion-icon:hover,
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.socials ion-icon:hover {
+  color: var(--midRed);
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact a {
+  margin-left: 20px;
+  color: var(--mainColor);
+  font-size: 130%;
+  transition: 0.2s;
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact a:hover {
+  color: var(--midRed);
+}
+section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.socials {
+  margin-top: 75px;
 }
 
 /** --  FOOTER  */
@@ -653,22 +751,22 @@ flex-direction: column;
   .nav-list .nav-item:hover {
     background-color: #ea282e4b;
   }
-  /* -- boxes */ 
+  /* -- boxes */
   section.boxes div {
     flex-basis: unset;
     /* height: auto; */
     width: 100%;
   }
-section.boxes div.box div.image1,
-section.boxes div.box div.image2 {
-  background-size: 100% 100%;
-}
-section.boxes div.form{
-width: calc(100% - 30px);
-}
-section.boxes div.form div.formbox{
-  padding: 0%;
-}
+  section.boxes div.box div.image1,
+  section.boxes div.box div.image2 {
+    background-size: 100% 100%;
+  }
+  section.boxes div.form {
+    width: calc(100% - 30px);
+  }
+  section.boxes div.form div.formbox {
+    padding: 0%;
+  }
   /* --footer */
   footer div.sectionWrapper div.footers > div {
     margin-bottom: 40px;
@@ -676,9 +774,16 @@ section.boxes div.form div.formbox{
   footer div.sectionWrapper div.footers > div {
     flex-basis: unset;
   }
+  /* 
+  contact us page
+  -- contact us 
+  */
+  section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
-  .sectionWrapper{
+  .sectionWrapper {
     padding: 10px;
   }
   /* --section introduction */
@@ -686,10 +791,10 @@ section.boxes div.form div.formbox{
     flex-direction: column;
     padding-bottom: 20px;
   }
-  section.introductions div.sectionWrapper div.introduction div.info h2{
+  section.introductions div.sectionWrapper div.introduction div.info h2 {
     margin-top: 40px;
   }
-  section.introductions div.sectionWrapper div.introduction div.info p.secondInfo{
+  section.introductions div.sectionWrapper div.introduction div.info p.secondInfo {
     margin-bottom: 50px;
   }
   section.introductions div.sectionWrapper div.introduction div.image {
@@ -716,32 +821,39 @@ section.boxes div.form div.formbox{
     /* margin-bottom: 40px; */
     width: 100%;
   }
-  footer div.sectionWrapper div.footers{
+  footer div.sectionWrapper div.footers {
     text-align: center;
   }
   footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email,
   footer div.sectionWrapper div.footers div.footer-left div.footerForm form button {
-	width: 100%;
-}
+    width: 100%;
+  }
   footer div.sectionWrapper div.footers div.footer-docial div.social {
     justify-content: center;
   }
-  /* footer div.sectionWrapper div.footers div{
-    display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-  } */
+  /* 
+  contact us page
+  -- contact us 
+  */
+  section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
+    flex-direction: column;
+  }
+  section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info div.info-contact:first-child {
+    margin-top: 0px;
+  }
+  section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 576px) {
   /* -- section introduction */
-  section.introductions div.sectionWrapper div.introduction{
+  section.introductions div.sectionWrapper div.introduction {
     padding: 0 0px 20px 0px;
   }
   /* --section info */
-    section.info div.sectionWrapper div.infoBoxes {
-      justify-content: center;
-    }
+  section.info div.sectionWrapper div.infoBoxes {
+    justify-content: center;
+  }
   section.info div.sectionWrapper div.infoBoxes div.infoBox {
     padding-right: 0px;
     max-width: 100%;
@@ -751,5 +863,17 @@ align-items: center;
     /* padding: 0 10px; */
   }
   /* -- footer */
-
+  /* 
+  contact us page
+  -- contact us 
+  */
+  section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
+    padding: 0;
+  }
+  section.contact-us div.sectionWrapper div.contact div.information{
+    padding: 20px 0;
+  }
+  section.contact-us div.sectionWrapper div.contact div.top {
+    padding: 15px 10px 70px 10px;
+  }
 }

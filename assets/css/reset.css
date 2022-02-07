@@ -15,6 +15,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  box-sizing: border-box;
 }
 /* Document
    ========================================================================== */
@@ -30,11 +31,11 @@ time, mark, audio, video {
   }
   
   /* Sections
-     ========================================================================== */
+  ========================================================================== */
   
   /**
-   * Remove the margin in all browsers.
-   */
+  * Remove the margin in all browsers.
+  */
   
   body {
     margin: 0;
