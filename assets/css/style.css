@@ -64,7 +64,8 @@ header::after {
   flex-direction: row-reverse;
 }
 .nav-list .nav-item .nav-link {
-  margin-left: 36px;
+  /* margin-left: 36px; */
+  padding: 0 15px;
   font-size: 21px;
   font-weight: bold;
   color: #ffffff;
@@ -521,6 +522,7 @@ footer div.sectionWrapper div.footers div.footer-left div.footerForm form {
 }
 footer div.sectionWrapper div.footers div.footer-left div.footerForm h5 {
   margin-bottom: 20px;
+  font-size: 120%;
 }
 footer div.sectionWrapper div.footers div.footer-left div.footerForm input#email {
   padding: 7px 7px 7px 0;
@@ -728,9 +730,12 @@ section.about-us div.sectionWrapper div.section1 div.boxes {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1210px;
+margin: 0 auto;
 }
 section.about-us div.sectionWrapper div.section1 div.boxes div.box {
-  flex-basis: 30%;
+  /* flex-basis: 30%; */
+  flex-basis: 305px;
   margin-bottom: 50px;
 }
 section.about-us div.sectionWrapper div.section1 div.boxes div.box p {
@@ -748,17 +753,61 @@ section.about-us div.sectionWrapper div.section1 div.boxes div.box div.boxTitle 
   margin-left: 20px;
   font-weight: 600;
 }
-section.about-us2 div.sectionWrapper div.section2{
-
+section.about-us2 div.section2 {
+  height: 250px;
 }
-section.about-us2 div.sectionWrapper div.section2 h3,
-section.about-us2 div.sectionWrapper div.section2 h4,
-section.about-us2 div.sectionWrapper div.section2 h5{
-text-align: center;
+section.about-us2 div.section2 h3,
+section.about-us2 div.section2 h4,
+section.about-us2 div.section2 h5 {
+  text-align: center;
 }
-section.about-us2 div.sectionWrapper div.section2 h3{
+section.about-us2 div.section2 h3 {
   font-size: 200%;
   margin: 15px 0;
+}
+section.about-us2 div.boxes {
+  background-color: var(--mainColor);
+  /* height: 330px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+section.about-us2 div.boxes div.wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  top: -100px;
+}
+section.about-us2 div.boxes div.wrapper div.box {
+  width: 250px;
+  background-color: var(--mainColor);
+  padding: 15px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.34);
+  color: var(--black);
+  margin-bottom: 20px;
+}
+section.about-us2 div.boxes div.wrapper div.box span {
+  background-color: var(--section);
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+section.about-us2 div.boxes div.wrapper div.box span img {
+  height: 70px;
+}
+section.about-us2 div.boxes div.wrapper div.box h3 {
+  margin: 15px 0;
+}
+section.about-us2 div.boxes div.wrapper div.box p {
+  color: var(--sectionReverse);
+  font-size: 85%;
 }
 
 /*
