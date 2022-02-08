@@ -565,7 +565,10 @@ footer div.sectionWrapper div.footers div.footer-docial div.social a {
 footer div.sectionWrapper div.footers div.footer-docial div.social a ion-icon.md.hydrated {
   font-size: 40px;
 }
-/* -- contact  us */
+/* 
+contact us page
+-- contact  us 
+*/
 section.contact-us {
   margin-top: 70px;
   background-color: #ffffff;
@@ -706,8 +709,62 @@ section.contact-us div.sectionWrapper div.contact div.information div.wrapper di
   margin-top: 75px;
 }
 
-/** --  FOOTER  */
+/*
+* -- about us page
+* -- about us
+*/
+section.about-us {
+  margin-top: 70px;
+  background-color: var(--section);
+  color: var(--black);
+}
+section.about-us div.sectionWrapper div.section1 h3 {
+  text-align: center;
+  font-size: 200%;
+  margin-bottom: 50px;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes div.box {
+  flex-basis: 30%;
+  margin-bottom: 50px;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes div.box p {
+  font-size: 85%;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes div.box div.boxTitle {
+  display: flex;
+  align-items: center;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes div.box div.boxTitle ion-icon {
+  font-size: 70px;
+}
+section.about-us div.sectionWrapper div.section1 div.boxes div.box div.boxTitle p.title {
+  font-size: 120%;
+  margin-left: 20px;
+  font-weight: 600;
+}
+section.about-us2 div.sectionWrapper div.section2{
 
+}
+section.about-us2 div.sectionWrapper div.section2 h3,
+section.about-us2 div.sectionWrapper div.section2 h4,
+section.about-us2 div.sectionWrapper div.section2 h5{
+text-align: center;
+}
+section.about-us2 div.sectionWrapper div.section2 h3{
+  font-size: 200%;
+  margin: 15px 0;
+}
+
+/*
+* -- RESPONSIVE SECTIONS
+*
+*/
 @media (max-width: 1200px) {
 }
 @media (max-width: 992px) {
@@ -870,7 +927,7 @@ section.contact-us div.sectionWrapper div.contact div.information div.wrapper di
   section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
     padding: 0;
   }
-  section.contact-us div.sectionWrapper div.contact div.information{
+  section.contact-us div.sectionWrapper div.contact div.information {
     padding: 20px 0;
   }
   section.contact-us div.sectionWrapper div.contact div.top {
