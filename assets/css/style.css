@@ -810,6 +810,65 @@ section.about-us2 div.boxes div.wrapper div.box p {
   font-size: 85%;
 }
 
+section.about-us3 div.down{
+background-color: var(--section);
+color: var(--black);
+}
+section.about-us3 div.down div.boxes div.members{
+  width: 50%;
+  margin-left: auto;
+  padding: 20px 0;
+}
+section.about-us3 div.down div.boxes div.members h2.membersTitle{
+text-align: left;
+font-size: 250%;
+}
+section.about-us3 div.down div.boxes div.members::after{
+  content: '';
+  width: 100%;
+  height: 8px;
+  display: block;
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(149,1,1,1) 52%, rgba(61,0,0,1) 100%);or: #5c29a0;
+}
+section.about-us3 div.down div.boxes div.wrapper {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+  padding: 20px 0;
+}
+section.about-us3 div.down div.boxes div.wrapper div.box{
+  width: 250px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.about-us3 div.down div.boxes div.wrapper div.box img{
+  /* height: 100%; */
+  width: 100%;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+section.about-us3 div.down div.boxes div.wrapper div.box h3.firstTitle{
+color: var(--darkRed);
+}
+section.about-us3 div.down div.boxes div.wrapper div.box h4.jobTitle{
+margin: 10px 0 20px 0;
+}
+section.about-us3 div.down div.boxes div.wrapper div.box p.info{
+font-size: 85%;
+color: #666666;
+margin-bottom: 20px;
+}
+section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon{
+font-size: 40px;
+color: var(--darkRed);
+transition: 0.3s;
+}
+section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon:hover{
+color: var(--midRed);
+}
+
 /*
 * -- RESPONSIVE SECTIONS
 *
@@ -938,8 +997,8 @@ section.about-us2 div.boxes div.wrapper div.box p {
     justify-content: center;
   }
   /* 
-  contact us page
-  -- contact us 
+  * -- contact us page
+  * -- contact us 
   */
   section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
     flex-direction: column;
@@ -949,6 +1008,13 @@ section.about-us2 div.boxes div.wrapper div.box p {
   }
   section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info {
     margin: 0 auto;
+  }
+  /*
+  * -- About us page
+  * -- About us
+  */
+  section.about-us2 div.boxes div.wrapper{
+    top: 0px;
   }
 }
 @media (max-width: 576px) {
@@ -968,7 +1034,7 @@ section.about-us2 div.boxes div.wrapper div.box p {
   section.boxes div.form div.formbox {
     /* padding: 0 10px; */
   }
-  /* -- footer */
+
   /* 
   contact us page
   -- contact us 
@@ -981,5 +1047,26 @@ section.about-us2 div.boxes div.wrapper div.box p {
   }
   section.contact-us div.sectionWrapper div.contact div.top {
     padding: 15px 10px 70px 10px;
+  }
+
+  /*
+  * -- About us page
+  * -- About us
+  */
+  section.about-us div.sectionWrapper div.section1 div.boxes{
+    justify-content: center;
+  }
+  section.about-us2 div.boxes div.wrapper{
+    justify-content: center;
+  }
+  section.about-us3 div.down div.boxes div.members{
+    width: 100%;
+  }
+  section.about-us3 div.down div.boxes div.members h2.membersTitle {
+    font-size: 200%;
+    padding-left: 10px;
+  }
+  section.about-us3 div.down div.boxes div.wrapper {
+    justify-content: center;
   }
 }
