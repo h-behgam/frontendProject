@@ -68,7 +68,7 @@ header::after {
 }
 .nav-list .nav-item .nav-link {
   /* margin-left: 36px; */
-  padding: 0 15px;
+  padding: 20px 15px;
   font-size: 21px;
   font-weight: bold;
   color: #ffffff;
@@ -120,6 +120,36 @@ nav a {
 }
 .nav-item a:hover:after {
   width: 100%;
+}
+#menu li {
+	position: relative;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: var(--black);
+	position: absolute;
+	z-index: 99;
+	display: none;
+  /* top: 50px; */
+  padding: 3px 0;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+  padding: 10px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
 }
 /* header end */
 
@@ -718,8 +748,13 @@ section.contact-us div.sectionWrapper div.contact div.information div.wrapper di
 * -- about us page
 * -- about us
 */
-section.about-us {
+section.about-us,
+section.about-us2,
+section.about-us3{
   margin-top: 70px;
+
+}
+section.about-us {
   background-color: var(--section);
   color: var(--black);
 }
@@ -1014,6 +1049,17 @@ section.products div.sectionWrapper div.cards div.wrapper div.card div.image img
 }
 @media (max-width: 992px) {
   /* HEADER*/
+  /* #menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none} */
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	/* #menu input, #menu label {position:absolute;top:0;left:0;display:block} */
+	/* #menu input {z-index:4} */
+	/* #menu input:checked + label {color:white} */
+	/* #menu input:checked + label:before {content:"\00d7"} */
+	/* #menu input:checked ~ ul {display:block} */
+
   .header-section .container {
     padding-left: 25px;
     padding-right: 25px;
