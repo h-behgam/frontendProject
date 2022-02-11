@@ -7,6 +7,9 @@
   --sectionReverse: #333333;
   --footerColor: #f0f0f0;
   --mainColor: #f0f0f0;
+  --blue: #0000ff;
+  --purple: #6a0dad;
+  --green: #00d100;
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -731,7 +734,7 @@ section.about-us div.sectionWrapper div.section1 div.boxes {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1210px;
-margin: 0 auto;
+  margin: 0 auto;
 }
 section.about-us div.sectionWrapper div.section1 div.boxes div.box {
   /* flex-basis: 30%; */
@@ -810,63 +813,197 @@ section.about-us2 div.boxes div.wrapper div.box p {
   font-size: 85%;
 }
 
-section.about-us3 div.down{
-background-color: var(--section);
-color: var(--black);
+section.about-us3 div.down {
+  background-color: var(--section);
+  color: var(--black);
 }
-section.about-us3 div.down div.boxes div.members{
+section.about-us3 div.down div.boxes div.members {
   width: 50%;
   margin-left: auto;
   padding: 20px 0;
 }
-section.about-us3 div.down div.boxes div.members h2.membersTitle{
-text-align: left;
-font-size: 250%;
+section.about-us3 div.down div.boxes div.members h2.membersTitle {
+  text-align: left;
+  font-size: 250%;
 }
-section.about-us3 div.down div.boxes div.members::after{
-  content: '';
+section.about-us3 div.down div.boxes div.members::after {
+  content: "";
   width: 100%;
   height: 8px;
   display: block;
-  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(149,1,1,1) 52%, rgba(61,0,0,1) 100%);or: #5c29a0;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(149, 1, 1, 1) 52%, rgba(61, 0, 0, 1) 100%);
+  or: #5c29a0;
 }
 section.about-us3 div.down div.boxes div.wrapper {
-	width: 80%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
   padding: 20px 0;
 }
-section.about-us3 div.down div.boxes div.wrapper div.box{
+section.about-us3 div.down div.boxes div.wrapper div.box {
   width: 250px;
   text-align: center;
   margin-bottom: 20px;
 }
-section.about-us3 div.down div.boxes div.wrapper div.box img{
+section.about-us3 div.down div.boxes div.wrapper div.box img {
   /* height: 100%; */
   width: 100%;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
-section.about-us3 div.down div.boxes div.wrapper div.box h3.firstTitle{
-color: var(--darkRed);
+section.about-us3 div.down div.boxes div.wrapper div.box h3.firstTitle {
+  color: var(--darkRed);
 }
-section.about-us3 div.down div.boxes div.wrapper div.box h4.jobTitle{
-margin: 10px 0 20px 0;
+section.about-us3 div.down div.boxes div.wrapper div.box h4.jobTitle {
+  margin: 10px 0 20px 0;
 }
-section.about-us3 div.down div.boxes div.wrapper div.box p.info{
-font-size: 85%;
-color: #666666;
-margin-bottom: 20px;
+section.about-us3 div.down div.boxes div.wrapper div.box p.info {
+  font-size: 85%;
+  color: #666666;
+  margin-bottom: 20px;
 }
-section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon{
-font-size: 40px;
-color: var(--darkRed);
-transition: 0.3s;
+section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon {
+  font-size: 40px;
+  color: var(--darkRed);
+  transition: 0.3s;
 }
-section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon:hover{
-color: var(--midRed);
+section.about-us3 div.down div.boxes div.wrapper div.box div.icon a ion-icon:hover {
+  color: var(--midRed);
+}
+
+/*
+* -- product page
+*
+*/
+section.products {
+  margin-top: 70px;
+  background-color: var(--section);
+  color: var(--black);
+}
+section.products div.sectionWrapper {
+  padding: 50px 0;
+}
+section.products div.sectionWrapper div.cards {
+  margin: 0 auto;
+  width: 80%;
+}
+section.products div.sectionWrapper div.cards div.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card {
+  width: 400px;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  /* padding: 10px; */
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div,
+/* section.products div.sectionWrapper div.cards div.wrapper div.card h5, */
+section.products div.sectionWrapper div.cards div.wrapper div.card h2 {
+  padding: 0 10px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div:first-child {
+  padding: 0;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card ul {
+  list-style: none;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.stars {
+  margin: 10px 0;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.stars ul.star {
+  display: flex;
+  flex-direction: row;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.stars ul.star a {
+  color: #cdb403;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card h5 {
+  font-weight: 300;
+  font-size: 85%;
+  margin-bottom: 20px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.property ul {
+  margin-bottom: 20px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.property ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 90%;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.property ul li ion-icon {
+  margin-right: 10px;
+  color: var(--blue);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.submit {
+  margin-bottom: 20px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.submit button {
+  padding: 8px 24px;
+  width: 100%;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px;
+  font-size: 85%;
+  border-top: 1px solid #fafafa;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.right,
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.left {
+  display: flex;
+  flex-direction: row;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.right p:first-child,
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.left p:first-child {
+  margin-right: 15px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.left p.now {
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.right p.old {
+  color: #666;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.discount div.right p.now {
+  color: var(--blue);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul {
+  display: flex;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li {
+  border-radius: 10px;
+  margin: 0 10px 20px 0;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li#green {
+  background-color: var(--green);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li#red {
+  background-color: var(--red);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li#blue {
+  background-color: var(--blue);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li#purple {
+  background-color: var(--purple);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.colors ul li#black {
+  background-color: var(--black);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card div.image img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /*
@@ -946,6 +1083,13 @@ color: var(--midRed);
   section.contact-us div.sectionWrapper div.contact div.information div.wrapper {
     width: 100%;
   }
+     /*
+  * -- product page
+  * -- product
+  */
+  section.products div.sectionWrapper div.cards{
+    width: 96%;
+  }
 }
 @media (max-width: 768px) {
   .sectionWrapper {
@@ -1009,12 +1153,24 @@ color: var(--midRed);
   section.contact-us div.sectionWrapper div.contact div.information div.wrapper div.info {
     margin: 0 auto;
   }
+
   /*
   * -- About us page
   * -- About us
   */
-  section.about-us2 div.boxes div.wrapper{
+  section.about-us2 div.boxes div.wrapper {
     top: 0px;
+  }
+
+  /*
+  * -- product page
+  * -- product
+  */
+  section.products div.sectionWrapper div.cards div.wrapper {
+    justify-content: center;
+  }
+  section.products div.sectionWrapper div.cards div.wrapper div.card{
+    width: 100%;
   }
 }
 @media (max-width: 576px) {
@@ -1053,13 +1209,13 @@ color: var(--midRed);
   * -- About us page
   * -- About us
   */
-  section.about-us div.sectionWrapper div.section1 div.boxes{
+  section.about-us div.sectionWrapper div.section1 div.boxes {
     justify-content: center;
   }
-  section.about-us2 div.boxes div.wrapper{
+  section.about-us2 div.boxes div.wrapper {
     justify-content: center;
   }
-  section.about-us3 div.down div.boxes div.members{
+  section.about-us3 div.down div.boxes div.members {
     width: 100%;
   }
   section.about-us3 div.down div.boxes div.members h2.membersTitle {
@@ -1068,5 +1224,13 @@ color: var(--midRed);
   }
   section.about-us3 div.down div.boxes div.wrapper {
     justify-content: center;
+  }
+
+   /*
+  * -- product page
+  * -- product
+  */
+  section.products div.sectionWrapper div.cards{
+    width: 96%;
   }
 }
