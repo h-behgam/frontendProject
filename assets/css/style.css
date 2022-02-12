@@ -924,6 +924,19 @@ section.products div.sectionWrapper div.cards {
   margin: 0 auto;
   width: 80%;
 }
+section.products div.sectionWrapper div.cards h3,
+section.products div.sectionWrapper div.cards h6{
+text-align: center;
+}
+section.products div.sectionWrapper div.cards h3{
+  margin-bottom: 20px;
+  font-size: 160%;
+}
+section.products div.sectionWrapper div.cards h6{
+  margin-bottom: 20px;
+  font-size: 100%;
+  font-weight: 400;
+}
 section.products div.sectionWrapper div.cards div.wrapper {
   display: flex;
   flex-direction: row;
