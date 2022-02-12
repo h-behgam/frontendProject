@@ -1040,6 +1040,101 @@ section.products div.sectionWrapper div.cards div.wrapper div.card div.image img
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+section.products div.sectionWrapper div.cards div.wrapper div.price-card{
+  width: 300px;
+border: none;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top{
+margin: 0 auto;
+position: relative;
+top: 50px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top div.flag{
+  width: 220px;
+  height: 130px;
+  margin: 0 auto;
+  padding-top: 15px;
+  position: relative; 
+  background: var(--midRed);
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top div.flag:after{
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid var(--mainColor);
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top div.flag p:first-child{
+  font-size: 190%;
+  font-weight: 700;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top div.flag p:last-child{
+  font-weight: 700;
+  font-size: 130%;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-top div.flag p span{
+font-size: 230%;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main{
+background-color: var(--mainColor);
+padding: 0 20px 50px;
+-webkit-box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.23); 
+box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.23);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main h4.card-title{
+font-weight: 300;
+font-size: 80%;
+margin: 80px 0 10px 0;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main div.card-main-text{
+display: flex;
+align-items: center;
+padding: 5px 0;
+border-top: 1px solid var(--section);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main div.card-main-text ion-icon{
+color: var(--green);
+margin-right: 15px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main div.card-main-text ion-icon#deny{
+  color: var(--sectionReverse);
+  margin-right: 15px;
+  }
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-main div.card-main-text p{
+  font-size: 80%;
+  font-weight: 300;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-butoon{
+  width: 100%;
+  position: relative;
+top: -22px;
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-butoon button{
+padding: 10px;
+width: 85%;
+margin: 0 auto;
+display: block;
+transition: 0.2s;
+font-weight: 500;
+color: var(--mainColor);
+border-radius: 5px;
+border: 1px solid var(--red);
+background-color: var(--midRed);
+-webkit-box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.23); 
+box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.23);
+}
+section.products div.sectionWrapper div.cards div.wrapper div.card.price-card div.wrapper div.card-butoon button:hover{
+  background-color: var(--red);
+}
 
 /*
 * -- RESPONSIVE SECTIONS
