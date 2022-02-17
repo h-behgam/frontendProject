@@ -11,6 +11,9 @@
   --purple: #6a0dad;
   --green: #00d100;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Raleway", sans-serif;
   background-color: var(--darkRed);
@@ -1149,6 +1152,42 @@ section.products div.sectionWrapper div.cards div.wrapper div.card.price-card di
   background-color: var(--red);
 }
 
+
+/*
+* -- back-to-to
+*
+*/
+.back-to-top {
+  position: fixed;
+  right: 1%;
+  bottom: -7.5%;
+  height: 15px;
+  width: 40px;
+  padding: 3px 5px;
+  /*font-size: 10px;*/
+  /*font-weight: bold;*/
+  color: transparent;
+  opacity: 0.5;
+  z-index: 5;
+  visibility: hidden;
+  /*text-align: center;*/
+  /*text-decoration: none;*/
+  /*text-transform: uppercase;*/
+  transition: all 0.25s ease-in-out;
+  /*background-color: #858585;*/
+}
+.back-to-top img{
+  width: 45px;
+}
+.back-to-top:hover, .back-to-top:focus {
+  opacity: 1;
+}
+
+.show-back-to-top {
+  display: block;
+  bottom: 12.5%;
+  visibility: visible;
+}
 /*
 * -- RESPONSIVE SECTIONS
 *

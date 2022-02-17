@@ -17,30 +17,21 @@ var swiper = new Swiper(".mySwiper", {
 // product slider
 var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 3,
-//   centeredSlides: true,
   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "fraction",
-//   },
   breakpoints: {
     360: {
-    slidesPerView: 1,
-    // spaceBetween: 40,
-  },
+      slidesPerView: 1,
+    },
     768: {
-        slidesPerView: 2,
-        // spaceBetween: 30,
+      slidesPerView: 2,
     },
     1024: {
-    slidesPerView: 3,
-    // spaceBetween: -40,
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
   },
-  1200: {
-    slidesPerView: 3,
-    // spaceBetween: 10,
-  },
-},
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -75,28 +66,29 @@ function sliderImage() {
 }
 sliderImage();
 
-
-
-(function() {
-
-    // play embed video
-    var playEmbedBtn = document.querySelector('.video-play-btn.embed-play');
-    if (playEmbedBtn) {
-        playEmbedBtn.onclick = function openModal(e) {
-            var embedVideoContainer = document.querySelector('.video-embed-content');
-            embedVideoContainer.classList.add('show-video');
-        };
-    }
+(function () {
+  // play embed video
+  var playEmbedBtn = document.querySelector(".video-play-btn.embed-play");
+  if (playEmbedBtn) {
+    playEmbedBtn.onclick = function openModal(e) {
+      var embedVideoContainer = document.querySelector(".video-embed-content");
+      embedVideoContainer.classList.add("show-video");
+    };
+  }
 })();
-// window.addEventListener('scroll', function(){
-//     //Here you forgot to update the value
-//     scrollpos = window.scrollY;
 
-//     if(scrollpos > 10){
-//         this.alert(11111);
-//     }
-//     else {
-//         remove_class_on_scroll();
-//     }
-//     console.log(scrollpos);
-// });
+window.addEventListener("scroll", function () {
+  let backToTop = document.getElementById("back-to-top");
+  //Here you forgot to update the value
+  scrollpos = window.scrollY;
+
+  if (scrollpos > 300) {
+    backToTop.classList.add("show-back-to-top");
+    backToTop.addEventListener("click", function () {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  } else {
+    backToTop.classList.remove("show-back-to-top");
+  }
+});
