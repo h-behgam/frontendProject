@@ -104,15 +104,11 @@ function onGet() {
 onGet();
 
 // play embed video
-(function () {
-  var playEmbedBtn = document.querySelector(".video-play-btn.embed-play");
-  if (playEmbedBtn) {
-    playEmbedBtn.onclick = function openModal(e) {
-      var embedVideoContainer = document.querySelector(".video-embed-content");
+document.querySelector(".video-play-btn.embed-play").addEventListener('click', playVideo);
+function playVideo(){
+  var embedVideoContainer = document.querySelector(".video-embed-content");
       embedVideoContainer.classList.add("show-video");
-    };
-  }
-})();
+};
 
 /*
 * -- active submenu by click insted of hover
