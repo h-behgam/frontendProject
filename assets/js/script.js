@@ -57,7 +57,7 @@ function sliderImage() {
         `;
       }
       document.getElementById("sWrapper").innerHTML = output;
-      console.log("The request succeeded.");
+      // console.log("The request succeeded.");
     } else if (this.status == 404 || this.status == 403) {
       console.log("Error 403 OR 404");
     } else {
@@ -114,6 +114,18 @@ onGet();
   }
 })();
 
+/*
+* -- active submenu by click insted of hover
+*/
+document.querySelectorAll('.nav-item').forEach(el => el.addEventListener('click', menus));
+function menus(){
+  let uls = this.getElementsByClassName("sub-menus");
+  uls[0].style.display = uls[0].style.display == "block" ? "" : "block";
+}
+
+/*
+* Back to top
+*/
 window.addEventListener("scroll", function () {
   let backToTop = document.getElementById("back-to-top");
   scrollpos = window.scrollY;
