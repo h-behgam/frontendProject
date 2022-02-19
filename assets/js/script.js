@@ -38,20 +38,22 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-// Get image from api for hero slider
+/*
+* -- Get image from api for hero slider
+* ** USE XMLHttpRequest
+*/
 let slider = document.getElementById("sliders");
-// console.log(slider);
-// slider.addEventListener('load', sliderImage);
 function sliderImage() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "https://coffee.alexflipnote.dev/random.json", true);
+  xhttp.responseType = JSON;
+  xhttp.open("GET", "https://picsum.photos/v2/list?limit=100", true);
   xhttp.onload = function () {
     if (this.status == 200) {
       let image = JSON.parse(this.responseText);
       var output = "";
       for (let i = 0; i < 3; i++) {
         output += `
-            <div class="swiper-slide"><img src="${image.file}" alt=""></div>
+            <div class="swiper-slide"><img src="${image[Math.floor(Math.random() * 99)].download_url}" alt=""></div>
         `;
       }
       document.getElementById("sWrapper").innerHTML = output;
@@ -64,10 +66,45 @@ function sliderImage() {
   };
   xhttp.send();
 }
-sliderImage();
+// sliderImage();
 
+/*
+* -- Get image from api for hero slider
+* ** USE fetch
+*/
+function onGet() {
+  const url = "https://picsum.photos/v2/list?limit=100";
+  var headers = {};
+
+  fetch(url, {
+    method: "GET",
+    mode: "cors",
+    headers: headers,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        console.log(response);
+        throw new Error(response.error);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      var output = "";
+      for (let i = 0; i < 3; i++) {
+        output += `
+            <div class="swiper-slide"><img src="${data[Math.floor(Math.random() * 99)].download_url}" alt=""></div>
+        `;
+      }
+      document.getElementById("sWrapper").innerHTML = output;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+onGet();
+
+// play embed video
 (function () {
-  // play embed video
   var playEmbedBtn = document.querySelector(".video-play-btn.embed-play");
   if (playEmbedBtn) {
     playEmbedBtn.onclick = function openModal(e) {
@@ -79,9 +116,7 @@ sliderImage();
 
 window.addEventListener("scroll", function () {
   let backToTop = document.getElementById("back-to-top");
-  //Here you forgot to update the value
   scrollpos = window.scrollY;
-
   if (scrollpos > 300) {
     backToTop.classList.add("show-back-to-top");
     backToTop.addEventListener("click", function () {
