@@ -39,9 +39,9 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 /*
-* -- Get image from api for hero slider
-* ** USE XMLHttpRequest
-*/
+ * -- Get image from api for hero slider
+ * ** USE XMLHttpRequest
+ */
 let slider = document.getElementById("sliders");
 function sliderImage() {
   var xhttp = new XMLHttpRequest();
@@ -69,9 +69,9 @@ function sliderImage() {
 // sliderImage();
 
 /*
-* -- Get image from api for hero slider
-* ** USE fetch
-*/
+ * -- Get image from api for hero slider
+ * ** USE fetch
+ */
 function onGet() {
   const url = "https://picsum.photos/v2/list?limit=100";
   var headers = {};
@@ -104,24 +104,27 @@ function onGet() {
 onGet();
 
 // play embed video
-document.querySelector(".video-play-btn.embed-play").addEventListener('click', playVideo);
-function playVideo(){
-  var embedVideoContainer = document.querySelector(".video-embed-content");
-      embedVideoContainer.classList.add("show-video");
-};
+let videoPlayer = document.querySelector(".video-play-btn.embed-play");
+if (videoPlayer) {
+  videoPlayer.addEventListener("click", playVideo);
+  function playVideo() {
+    var embedVideoContainer = document.querySelector(".video-embed-content");
+    embedVideoContainer.classList.add("show-video");
+  }
+}
 
 /*
-* -- active submenu by click insted of hover
-*/
-document.querySelectorAll('.nav-item').forEach(el => el.addEventListener('click', menus));
-function menus(){
+ * -- active submenu by click insted of hover
+ */
+document.querySelectorAll(".nav-item").forEach((el) => el.addEventListener("click", menus));
+function menus() {
   let uls = this.getElementsByClassName("sub-menus");
   uls[0].style.display = uls[0].style.display == "block" ? "" : "block";
 }
 
 /*
-* Back to top
-*/
+ * Back to top
+ */
 window.addEventListener("scroll", function () {
   let backToTop = document.getElementById("back-to-top");
   scrollpos = window.scrollY;
