@@ -1370,6 +1370,9 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
 @media (max-width: 1200px) {
 }
 @media (max-width: 992px) {
+  .back-to-top {
+    right: 3%;
+  }
   /* HEADER*/
   #menu ul.sub-menus {
     width: 100%;
@@ -1395,21 +1398,27 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   }
   .nav-list {
     overflow: hidden;
-    top: 101%;
-    right: 0;
-    left: 0;
+    /* top: 101%;
+    position: absolute; */
     align-items: flex-end;
     z-index: 10;
-    position: absolute;
     flex-direction: column;
     background-color: #ffffff;
     max-width: 0;
     max-height: 0;
     transition: 0.3s;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .nav-list.opened {
     max-width: 100%;
-    max-height: 500px;
+    /* max-height: 500px; */
+    max-height: inherit;
   }
   .nav-list .nav-item {
     display: flex;
@@ -1463,6 +1472,11 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   */
   section.products div.sectionWrapper div.cards {
     width: 96%;
+  }
+  section.introductions div.sectionWrapper div.introduction div.info a.infoLink {
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
