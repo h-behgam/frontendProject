@@ -20,7 +20,7 @@ var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 3,
   spaceBetween: 30,
   breakpoints: {
-    360: {
+    280: {
       slidesPerView: 1,
     },
     768: {
@@ -71,7 +71,8 @@ function sliderImage() {
 
 /*
  * -- Get image from api for hero slider
- * ** USE fetch
+ * -- USE fetch
+ * -- for document use https://picsum.photos/
  */
 function onGet() {
   const url = "https://picsum.photos/v2/list?limit=100";

@@ -1437,6 +1437,9 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
     background-color: transparent;
   }
   /* -- boxes */
+  section.boxes {
+   justify-content: center;
+ }
   section.boxes div {
     flex-basis: unset;
     /* height: auto; */
@@ -1473,6 +1476,7 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   section.products div.sectionWrapper div.cards {
     width: 96%;
   }
+  
   section.introductions div.sectionWrapper div.introduction div.info a.infoLink {
     width: 100%;
     display: block;
@@ -1500,10 +1504,6 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   /* --section info */
   section.info div.sectionWrapper div.infoBoxes {
     justify-content: space-around;
-  }
-  /* --section boxes */
-  section.boxes {
-    justify-content: center;
   }
 
   /* -- footer */
