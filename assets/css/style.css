@@ -1370,9 +1370,6 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
 @media (max-width: 1200px) {
 }
 @media (max-width: 992px) {
-  .back-to-top {
-    right: 3%;
-  }
   /* HEADER*/
   #menu ul.sub-menus {
     width: 100%;
@@ -1398,27 +1395,21 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   }
   .nav-list {
     overflow: hidden;
-    /* top: 101%;
-    position: absolute; */
+    top: 101%;
+    right: 0;
+    left: 0;
     align-items: flex-end;
     z-index: 10;
+    position: absolute;
     flex-direction: column;
     background-color: #ffffff;
     max-width: 0;
     max-height: 0;
     transition: 0.3s;
-    top: 70px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
   }
   .nav-list.opened {
     max-width: 100%;
-    /* max-height: 500px; */
-    max-height: inherit;
+    max-height: 500px;
   }
   .nav-list .nav-item {
     display: flex;
@@ -1437,6 +1428,9 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
     background-color: transparent;
   }
   /* -- boxes */
+  section.boxes {
+   justify-content: center;
+ }
   section.boxes div {
     flex-basis: unset;
     /* height: auto; */
@@ -1473,11 +1467,15 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   section.products div.sectionWrapper div.cards {
     width: 96%;
   }
+<<<<<<< HEAD
+  
   section.introductions div.sectionWrapper div.introduction div.info a.infoLink {
     width: 100%;
     display: block;
     text-align: center;
   }
+=======
+>>>>>>> parent of 188ce78 (solve some bogs)
 }
 @media (max-width: 768px) {
   .sectionWrapper {
@@ -1500,10 +1498,6 @@ div.sectionWrapper div.cards div.wrapper div.card3 div.prices div.button button.
   /* --section info */
   section.info div.sectionWrapper div.infoBoxes {
     justify-content: space-around;
-  }
-  /* --section boxes */
-  section.boxes {
-    justify-content: center;
   }
 
   /* -- footer */

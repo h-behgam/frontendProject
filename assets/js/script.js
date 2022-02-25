@@ -2,7 +2,6 @@
 let nav = document.getElementById("tNav");
 let ul = document.getElementById("navList");
 function menu() {
-  document.getElementsByTagName("body")[0].style.overflow = "hidden";
   ul.classList.toggle("opened");
 }
 nav.addEventListener("click", menu);
@@ -20,7 +19,7 @@ var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 3,
   spaceBetween: 30,
   breakpoints: {
-    360: {
+    280: {
       slidesPerView: 1,
     },
     768: {
@@ -71,7 +70,8 @@ function sliderImage() {
 
 /*
  * -- Get image from api for hero slider
- * ** USE fetch
+ * -- USE fetch
+ * -- for document use https://picsum.photos/
  */
 function onGet() {
   const url = "https://picsum.photos/v2/list?limit=100";
@@ -119,14 +119,8 @@ if (videoPlayer) {
  */
 document.querySelectorAll(".nav-item").forEach((el) => el.addEventListener("click", menus));
 function menus() {
-  let subMenus = document.querySelectorAll(".sub-menus");
   let uls = this.getElementsByClassName("sub-menus");
-  if (uls[0].style.display === "block") {
-    uls[0].style.display = "";
-  } else {
-    subMenus.forEach((element, index) => (subMenus[index].style.display = ""));
-    uls[0].style.display = "block";
-  }
+  uls[0].style.display = uls[0].style.display == "block" ? "" : "block";
 }
 
 /*
